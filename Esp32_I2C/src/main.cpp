@@ -28,7 +28,7 @@ void loop()
   while (1)
   {
     int num = Wire1.read();
-    if (num >=225)
+    if (num > 127 || num < 0)
       break;
     Serial.print((char)num);
   }
